@@ -1,5 +1,6 @@
-**ES6 Basics**
-##This project contains tasks for learning the basics of ECMAScript 2015 (ES6).
+`0x00-ES_basic`
+
+This project contains tasks for learning the basics of ECMAScript 2015 (ES6).
 
 Tasks To Complete
  0. Const or let?
