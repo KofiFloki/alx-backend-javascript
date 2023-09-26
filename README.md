@@ -1,5 +1,6 @@
 `0x00-ES_basic`
 
+
 This project contains tasks for learning the basics of ECMAScript 2015 (ES6).
 
 Tasks To Complete
@@ -99,6 +100,7 @@ export default function getSanFranciscoDescription() {
 7-getBudgetObject.js contains a script that meets the following requirements.
 
 For the code below, modify the following function’s budget object to simply use the keyname instead.
+For the code below, modify the following function’s budget object to simply use the keyname instead.
 export default function getBudgetObject(income, gdp, capita) {
   const budget = {
     income: income,
@@ -196,7 +198,6 @@ This function will return an iterator to go through every employee in every depa
 
 Write a function named iterateThroughObject. The function’s parameter reportWithIterator is the return value from createIteratorObject.
 export default function iterateThroughObject(reportWithIterator) {
-
 }
 It should return every employee name in a string, separated by |.
 
