@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple project for learning the basics of Node.js for server-side apps.",
   "main": "index.js",
-  "author": "Jeeremiah Martey",
+  "author": "Jeremiah Martey",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -32,4 +32,3 @@
     "sinon": "^7.5.0"
   }
 }
-
