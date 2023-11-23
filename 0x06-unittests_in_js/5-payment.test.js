@@ -3,27 +3,25 @@ const { expect } = require('chai');
 const sendPaymentRequestToApi = require('./5-payment');
 
 describe('sendPaymentRequestToApi', () => {
-  let bigBrother;
+ let consoleLogStub;
 
-  beforeEach(() => {
-    if (!bigBrother) {
-      bigBrother = sinon.spy(console);
-    }
-  });
+ beforeEach(() => {
+    consoleLogStub = sinon.stub(console, 'log');
+ });
 
-  afterEach(() => {
-    bigBrother.log.resetHistory();
-  });
+ afterEach(() => {
+    consoleLogStub.restore();
+ });
 
-  it('sendPaymentRequestToApi(100, 20) logs "The total is: 120" to the console', () => {
+ it('sendPaymentRequestToApi(100, 20) logs "The total is: 120" to the console', () => {
     sendPaymentRequestToApi(100, 20);
-    expect(bigBrother.log.calledWith('The total is: 120')).to.be.true;
-    expect(bigBrother.log.calledOnce).to.be.true;
-  });
+    expect(consoleLogStub.calledWith('The total is: 120')).to.be.true;
+    expect(consoleLogStub.calledOnce).to.be.true;
+ });
 
-  it('sendPaymentRequestToApi(10, 10) logs "The total is: 20" to the console', () => {
+ it('sendPaymentRequestToApi(10, 10) logs "The total is: 20" to the console', () => {
     sendPaymentRequestToApi(10, 10);
-    expect(bigBrother.log.calledWith('The total is: 20')).to.be.true;
-    expect(bigBrother.log.calledOnce).to.be.true;
-  });
+    expect(consoleLogStub.calledWith('The total is: 20')).to.be.true;
+    expect(consoleLogStub.calledOnce).to.be.true;
+ });
 });
